@@ -1,0 +1,78 @@
+import java.io.IOException;
+import java.io.StringReader;
+
+
+public class Parser{
+
+	private StringReader Reader;
+	private char currentCharacter;
+	public Parser(StringReader Reader) {
+		this.Reader=Reader;	
+	}
+
+	public static void main(String [] args) {
+		System.out.println("E");
+	}
+	public boolean readTrue () throws IOException{
+		if (ReadNextExpected('r')) {
+			if (ReadNextExpected('u')) {
+				if (ReadNextExpected('e')) {
+
+					return true;
+
+				}
+
+			}
+
+		}
+		System.out.println("Invalid Input");
+		return false;
+
+	}
+	public boolean ReadFalse () throws IOException{
+		if (ReadNextExpected('a')) {
+			if (ReadNextExpected('l')) {
+				if (ReadNextExpected('s')) {
+					if (ReadNextExpected('e')) {return true;
+					}
+
+				}
+			}
+		}
+		return false;
+	}
+	public boolean ReadNull () throws IOException{
+		if (ReadNextExpected('u')) {
+			if (ReadNextExpected('l')) {
+				if (ReadNextExpected('l')) {
+					return true;
+				}
+
+			}
+		}
+		return false;
+	}
+	public String  ReadString () {
+		return "abc";
+		//todo loop
+	}
+
+	public void ReadNext () throws IOException {
+		currentCharacter=(char)Reader.read();	
+	}
+	public boolean ReadNextExpected (char c) throws IOException {
+		ReadNext();
+		if (c==currentCharacter) {
+			return true;
+		}
+		return false;
+	}
+
+
+
+
+
+}
+
+
+
