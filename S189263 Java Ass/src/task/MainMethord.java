@@ -23,6 +23,6 @@ public class MainMethord {
 		//out.print("Hello "); 
 		//out.println("world"); 
 		//out.close();
-	// code fixed - 19/12/18
+	// code fixed inc test - 19/12/18
 	
 }
